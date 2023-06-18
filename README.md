@@ -11,9 +11,9 @@
 
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">YourName</h5>
-<h5 align="center" style="padding:0;margin:0;">Your Student Num</h5>
-<h6 align="center">DV200 - Term 1 | 2022</h6>
+<h5 align="center" style="padding:0;margin:0;">Clarisse Strijdom</h5>
+<h5 align="center" style="padding:0;margin:0;">21100249</h5>
+<h6 align="center">DV200 - Term 2 | 2023</h6>
 </br>
 <p align="center">
 
