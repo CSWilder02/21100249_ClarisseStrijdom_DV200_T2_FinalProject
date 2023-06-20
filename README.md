@@ -21,11 +21,12 @@
     <img src="pokemonproject/src/Images/Char.png" alt="Logo" width="140" height="140">
   </a>
   
-  <h3 align="center">Name of website</h3>
+  <h3 align="center">LifeSaving</h3>
 
   <p align="center">
 
- Short Description of website
+ Our brief challenged us to use PHP and MySQL to fundementally build a website that allows access to multiple receptionists to login. Our website was build to authenticate, validate and secure receptionist profiles. Add and stor patient and doctor information. Update, delete patient and doctor information. Update current logged in receptionist profile. Setup and delete appointments between doctors, patients and doctor rooms. Our website should also showcase "todays"or "this weeks"appointments. 
+ 
    <br>
     <i>more about website</i> 
     
