@@ -1,5 +1,7 @@
 # 21100249_ClarisseStrijdom_DV200_T2_FinalProject
  
+# 21100249_ClarisseStrijdom_DV200_T2_FinalProject
+ 
 
 <!-- Repository Information & Links-->
 <br />
@@ -18,7 +20,7 @@
 <p align="center">
 
   <a href="https://github.com/YourName/NameOfRepo">
-    <img src="pokemonproject/src/Images/Char.png" alt="Logo" width="140" height="140">
+    <img src="Images\Logo.png" alt="Logo" width="140" height="140">
   </a>
   
   <h3 align="center">LifeSaving</h3>
@@ -68,7 +70,7 @@ A website that allows access to multiple receptionists from a doctors room to lo
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](pokemonproject/src/Images/Ideation/intro.png)
+![image1](Images/Medical%20mockup3.png)
 
 ### Project Description
 
@@ -116,7 +118,7 @@ Run the following in the command-line to clone the project:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](pokemonproject/src/Images/mockups/mockup1.png)
+![image2](images/mEDICAL%20MOCKUP.png)
 
 
 ### Name Feature 
