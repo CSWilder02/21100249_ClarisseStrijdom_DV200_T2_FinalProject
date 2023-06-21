@@ -1,0 +1,416 @@
+body{
+    background-color: #F3FAFF;
+    background-image: url("Images/Cyrcledecor.png");
+    background-repeat: no-repeat;
+    background-size: 300px 250px;
+    background-position: 2% 2%;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+/* login patients */
+
+#login{
+    width: 1206px;
+    height: 550px;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom right, white, #F3FAFF);
+    border-radius: 30px;
+    border-image: linear-gradient(45deg, white, #F7FBFE) 30;
+    opacity: 90%;
+}
+
+.patientpage{
+    width: 50px;
+    height: 50px;
+}
+
+#profileimg{
+    width: 100px;
+    height: 100px;
+    margin-top: -95px;
+    margin-right: 80px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: 5px 5px 8px 0px #969696;
+    border: none;
+}
+
+#BigCyrcle{
+    width: 650px;
+    margin-top: -60px;
+    margin-right: -300px;
+}
+
+#illu1{
+    width: 200px;
+    margin-right: -240px;
+    margin-top: 70px;
+}
+
+h3{
+    font-family: 'Barlow Medium', sans-serif; 
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 62px;
+}
+
+
+#input4{
+    background-color: transparent;
+    margin-left: 62px;
+    margin-top: 30px;
+    width: 590px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #09456B;
+}
+
+#input5{
+    background-color: transparent;
+    margin-left: 62px;
+    margin-top: 50px;
+    width: 590px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #09456B;
+}
+
+#input6{
+  background-color: transparent;
+  margin-left: 62px;
+  margin-top: 50px;
+  width: 590px;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #09456B;
+}
+
+.container{
+    background-color: transparent;
+    font-family: 'Barlow Medium', sans-serif; 
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 82px;
+}
+
+.checkbox{
+    width: 21px;
+    height: 21px;
+    margin-top: 20px;
+    box-shadow: inset 2px 2px 5px 2px #969696;
+}
+
+.add{
+  width: 50px;
+  background-color: #09456B;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #126197 0%, #26a0da  51%, #126197 100%);
+    font-family: 'Barlow', sans-serif;
+    margin-left: 200px;
+    margin-top: 50px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    border: none;
+    display: block;
+    width: 300px;
+    height: 50px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #login-btn{
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 8px 0px #969696;
+    border: none;
+    background: linear-gradient(#2C398B, #00ADEE);
+    -webkit-text-fill-color: transparent;
+    margin-left: 400px;
+    margin-top: -50px;
+  }
+
+  /* Login Receptionists */
+
+  .btn-grad2 {
+    background-image: linear-gradient(to right, #126197 0%, #26a0da  51%, #126197 100%);
+    font-family: 'Barlow', sans-serif;
+    margin-left: 250px;
+    margin-top: 50px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    border: none;
+    display: block;
+    width: 260px;
+    height: 50px;
+  }
+
+  .btn-grad2:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  /* Home Page Patients */
+
+  /* Navbar */
+
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {
+    padding: 15px;
+    color: #fff;
+  }
+  
+  #navbarSupportedContent {
+    position: relative;
+  }
+  #navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  #navbarSupportedContent ul li a i {
+    margin-right: 10px;
+  }
+  #navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+  }
+  #navbarSupportedContent ul li a {
+    color: #0B466C;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    margin-top: -55px;
+  }
+  #navbarSupportedContent > ul > li.active > a {
+    color: #0B466C;
+    background-color: transparent;
+    transition: all 0.7s;
+    margin-left: 200px;
+    padding-left: 600px;
+  }
+  #navbarSupportedContent a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+  }
+  #navbarSupportedContent .active > a:not(:only-child):after {
+    transform: rotate(90deg);
+  }
+  .hori-selector {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 10px;
+  }
+  .hori-selector .right,
+  .hori-selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    bottom: 10px;
+  }
+  .hori-selector .right {
+    right: -25px;
+  }
+  .hori-selector .left {
+    left: -25px;
+  }
+  .hori-selector .right:before,
+  .hori-selector .left:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #5161ce;
+  }
+  .hori-selector .right:before {
+    bottom: 0;
+    right: -25px;
+  }
+  .hori-selector .left:before {
+    bottom: 0;
+    left: -25px;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-expand-custom {
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-toggler {
+      display: none;
+    }
+    .navbar-expand-custom .navbar-collapse {
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    #navbarSupportedContent ul li a {
+      padding: 12px 30px;
+    }
+    .hori-selector {
+      margin-top: 0px;
+      margin-left: 10px;
+      border-radius: 0;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+    .hori-selector .left,
+    .hori-selector .right {
+      right: 10px;
+    }
+    .hori-selector .left {
+      top: -25px;
+      left: auto;
+    }
+    .hori-selector .right {
+      bottom: -25px;
+    }
+    .hori-selector .left:before {
+      left: -25px;
+      top: -25px;
+    }
+    .hori-selector .right:before {
+      bottom: -25px;
+      left: -25px;
+    }
+  }
+  
+
+  /* Home Page */
+
+.title_home{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+
+.form-group{
+  width: 300px;
+}
+
+.card{
+  width: 500px;
+}
+
+#name{
+  border: none;
+  border-bottom: 1px solid #09456B;
+  background-color: transparent;
+  color: #0B466C;
+}
+
+
+/* Hier */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.navbar-logo img {
+  height: 60px;
+}
+
+.navbar-options {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+li{
+  padding-left: 50px;
+}
+
+.navbar-options ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-options li {
+  margin-right: 10px;
+}
+
+.navbar-options .dropdown {
+  position: relative;
+}
+
+.navbar-options .dropdown-content {
+  width: 60px;
+  display: none;
+  position: absolute;
+  background-color: #f8f9fa;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar-options .dropdown:hover .dropdown-content {
+  display: block;
+}
