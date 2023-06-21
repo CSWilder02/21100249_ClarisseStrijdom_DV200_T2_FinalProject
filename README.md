@@ -99,12 +99,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/YourName/Pokemon.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/CSWilder02/21100249_ClarisseStrijdom_DV200_T2_FinalProject.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/YourName/Pokemon.git
+   git clone https://github.com/CSWilder02/21100249_ClarisseStrijdom_DV200_T2_FinalProject.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
