@@ -108,12 +108,6 @@ Run the following in the command-line to clone the project:
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
-3. Install Dependencies </br>
-Run the following in the command-line to install all the required dependencies:
-   ```sh
-   npm install
-   ```
-
 4. An API key is not required
 
 
