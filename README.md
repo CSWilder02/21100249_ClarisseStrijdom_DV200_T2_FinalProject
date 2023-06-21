@@ -25,7 +25,7 @@
 
   <p align="center">
 
- Our brief challenged us to use PHP and MySQL to fundementally build a website that allows access to multiple receptionists to login. Our website was build to authenticate, validate and secure receptionist profiles. Add and stor patient and doctor information. Update, delete patient and doctor information. Update current logged in receptionist profile. Setup and delete appointments between doctors, patients and doctor rooms. Our website should also showcase "todays"or "this weeks"appointments. 
+A website that allows access to multiple receptionists from a doctors room to login. Our website was build to authenticate, validate and secure receptionist profiles. Add and stor patient and doctor information. Update, delete patient and doctor information. Update current logged in receptionist profile. Setup and delete appointments between doctors, patients and doctor rooms. Our website should also showcase "todays"or "this weeks"appointments. 
  
    <br>
     <i>more about website</i> 
@@ -72,13 +72,16 @@
 
 ### Project Description
 
-Add description here 
+
+ Our brief challenged us to use PHP and MySQL to fundementally build a website that allows access to multiple receptionists to login. Our website was build to authenticate, validate and secure receptionist profiles. Add and stor patient and doctor information. Update, delete patient and doctor information. Update current logged in receptionist profile. Setup and delete appointments between doctors, patients and doctor rooms. Our website should also showcase "todays"or "this weeks"appointments. 
 
 ### Built With
 
-* [React](https://reactjs.org/)
-* [Charts.js](https://www.chartjs.org/)
-* [PokeApi](https://pokeapi.co/)
+* HTML - Hypertext Markup Language
+* CSS - Cascading Style Sheets
+* JS - JavaScript
+* PHP - Hypertext Preprocessor
+* MySQL - Structured Query Language
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
