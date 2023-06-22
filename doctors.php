@@ -1,7 +1,7 @@
 <!-- uploading images -->
 
 <?php
-// error_reporting(0)
+error_reporting(0);
 
     require 'db.php';
     if (isset($_POST["submit"])){
@@ -13,7 +13,7 @@
       $password = $_POST["password"];
       $phone_number = $_POST["phone_number"];
       $rank = $_POST["rank"];
-      $profile_img = $_POST["profile_img"];
+     
 
         if ($_FILES["image"]["error"] === 4) {
             echo "<script> alert('Image Does Not Exist'); </script>";
@@ -43,7 +43,7 @@
                 $newImageName .= '.' . $imageExtension;
 
                 move_uploaded_file($tmpName, 'Images/'. $newImageName);
-                $sql = "INSERT INTO doctors (name_surname, age, gender, email, password, phone_number, specialisation, room_id, profile_img) VALUES ('$name_surname', '$age', '$gender', '$email', '$password', '$phone_number', '$specialisation', '$room_id', '$profile_img')";
+                $sql = "INSERT INTO doctors (name_surname, age, gender, email, password, phone_number, specialisation, room_id, profile_img) VALUES ('$name_surname', '$age', '$gender', '$email', '$password', '$phone_number', '$specialisation', '$room_id', '$newImageName')";
                 mysqli_query($conn, $sql);
                 echo "<script> alert('Successfully Added'); </script>";
             }
@@ -114,34 +114,34 @@
   
   
   <div id="table" style="margin-left: 40px">
-    <form class="form-inline m-2" action="createdoctor.php" method="POST">
+    <form class="form-inline m-2" action="" method="POST" autocomplete="off" enctype="multipart/form-data">
       <div style="margin-left: 40px" class="form-group">
         <label for="name">Name & Surname:</label>
-        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="patient_id">
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="name_surname">
       </div> <break>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="score">Age:</label>
-        <input style="width: 600px;" type="number" class="form-control m-2" id="name" name="receptionist_id">
+        <input style="width: 600px;" type="number" class="form-control m-2" id="name" name="age">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Gender: </label>
-        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="doctor_id">
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="gender">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Email:</label>
-        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="date">
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="email">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Password:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
+        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="password">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Phone Number:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
+        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="phone_number">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Specialisation:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
+        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="specialisation">
       </div>
       <div style="margin-left: 40px" class="form-group">
         <label style="margin-top: 30px;" for="name">Room ID:</label>
@@ -153,7 +153,7 @@
       <label for="image">Upload Image</label><br>
       <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""><br><br>
 
-      <button type="submit" style="margin-top: 50px; margin-left: 40px; width: 300px; background-color: #09456B; padding-top: 10px; padding-bottom: 10px" class="btn btn-primary">Add</button>
+      <button type="submit" name="submit" style="margin-top: 50px; margin-left: 40px; width: 300px; background-color: #09456B; padding-top: 10px; padding-bottom: 10px" class="btn btn-primary">Add</button>
     </form>
   </div>
  

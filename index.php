@@ -1,61 +1,3 @@
-<!-- uploading images -->
-
-<?php
-// error_reporting(0)
-
-    require 'db.php';
-    if (isset($_POST["submit"])){
-      $id = $_POST["id"];
-      $name_surname = $_POST["name_surname"];
-      $age = $_POST["age"];
-      $gender = $_POST["gender"];
-      $email = $_POST["email"];
-      $password = $_POST["password"];
-      $phone_number = $_POST["phone_number"];
-      $rank = $_POST["rank"];
-      $imgage = $_POST["image"];
-
-        if ($_FILES["image"]["error"] === 4) {
-            echo "<script> alert('Image Does Not Exist'); </script>";
-        } 
-        
-        else{
-            $fileName = $_FILES["image"]["name"];
-            $fileSize = $_FILES["image"]["size"];
-            $tmpName = $_FILES["image"]["tmp_name"];
-
-            $validImageExtension = ['jpg', 'jpeg', 'png'];
-            $imageExtension = explode('.', $fileName);
-            $imageExtension = strtolower(end($imageExtension));
-            if ( !in_array($imageExtension, $validImageExtension) ){
-                echo
-                "
-                <script>
-                  alert('Invalid Image Extension');
-                </script>
-                ";
-              }
-              else  if($fileSize > 1000000){
-                echo "<script> alert('Image Size To Large'); </script>";
-            }
-            else {
-                $newImageName = uniqid();
-                $newImageName .= '.' . $imageExtension;
-
-                move_uploaded_file($tmpName, 'Images/'. $newImageName);
-                $sql = "INSERT INTO appointments (patient_id, receptionist_id, doctor_id, room_id, date, image) VALUES ('$patient_id', '$receptionist_id', '$doctor_id', '$room_id', '$date', '$image')";
-                mysqli_query($conn, $sql);
-                echo "<script> alert('Successfully Added'); </script>";
-            }
-        }
-        // $conn->query($sql);
-        // $conn->close();
-
-        // header("location: patients.php");
-    }
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,12 +77,7 @@
         <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
       </div>
 
-      <!-- Image -->
-
-      <label for="image">Upload Image</label><br>
-      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""><br><br>
-
-      <button style="margin-top: 50px; margin-left: 40px; width: 300px; background-color: #09456B; padding-top: 10px; padding-bottom: 10px" type="submit" class="btn btn-primary">Add</button>
+      <button style="margin-top: 50px; margin-left: 40px; width: 300px; background-color: #09456B; padding-top: 10px; padding-bottom: 10px" type="submit" name="submit" class="btn btn-primary">Add</button>
     </form>
   </div>
   </div>

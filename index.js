@@ -17,9 +17,9 @@ function login() {
   }
 }
 
-// Check if the user is already logged in
-window.onload = function() {
-  if (localStorage.getItem('isLoggedIn') === 'true') {
-    window.location.href = 'index.php'; // Redirect to index.php if already logged in
-  }
-};
+// // Check if the user is already logged in
+// window.onload = function() {
+//   if (localStorage.getItem('isLoggedIn') === 'true') {
+//     window.location.href = 'index.php'; // Redirect to index.php if already logged in
+//   }
+// };
