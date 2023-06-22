@@ -1,4 +1,3 @@
-<!-- uploading images -->
 
 <?php
 // error_reporting(0)
@@ -13,7 +12,7 @@
       $password = $_POST["password"];
       $phone_number = $_POST["phone_number"];
       $rank = $_POST["rank"];
-      $imgage = $_POST["image"];
+      $profile_img = $_POST["profile_img"];
 
         if ($_FILES["image"]["error"] === 4) {
             echo "<script> alert('Image Does Not Exist'); </script>";
@@ -42,8 +41,8 @@
                 $newImageName = uniqid();
                 $newImageName .= '.' . $imageExtension;
 
-                move_uploaded_file($tmpName, 'Images/'. $newImageName);
-                $sql = "INSERT INTO appointments (patient_id, receptionist_id, doctor_id, room_id, date, image) VALUES ('$patient_id', '$receptionist_id', '$doctor_id', '$room_id', '$date', '$image')";
+                move_uploaded_file($tmpName, 'images/'. $newImageName);
+                $sql = "INSERT INTO receptionists (name_surname, age, gender, email, password, phone_number, rank, profile_img) VALUES ('$name_surname', '$age', '$gender', '$email', '$password', '$phone_number', '$rank', '$profile_img')";
                 mysqli_query($conn, $sql);
                 echo "<script> alert('Successfully Added'); </script>";
             }
@@ -77,8 +76,6 @@
 </head>
 <body style="background-color: #F7FBFE;">
 
-<!-- Nav bar -->
-
 <nav class="navbar">
 <div class="navbar-logo">
       <img src="Images\Logo.png" alt="Logo">
@@ -101,41 +98,47 @@
 
 
     <div class="container" style="background-image: url('Images/Background.png'); background-repeat: no-repeat;">
-  <h1 class="title_home">Upcoming Appointments</h1>
-
-<!-- Database Information -->
+  <h1 class="title_home">Receptionist Information</h1>
 
   <div id="appointments" style="width: 750px; margin-left: auto; margin-right: auto; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); border-radius: 10px; padding-left: 80px; padding-top: 50px; margin-top: 50px">
     <table class="table" style="margin-left: 50px; background-image: url('Images/Background.png'); background-repeat: no-repeat;">
       <tbody>
-        <?php include 'read.php'; ?>
+        <?php include 'readprofile.php'; ?>
       </tbody>
     </table>
 
     <div id="table" style="margin-left: 40px">
-    <form class="form-inline m-2" action="create.php" method="POST">
+    <form class="form-inline m-2" action="createprofile.php" method="POST">
       <div style="margin-left: 40px" class="form-group">
-        <label style="margin-top: 30px;" for="name">Patient ID:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="patient_id">
+        <label style="margin-top: 30px;" for="name">Name and Surname:</label>
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="name_surname">
       </div><break>
       <div style="margin-left: 40px" class="form-group">
-        <label style="margin-top: 30px;" for="score">Receptionist ID:</label>
-        <inpu style="width: 600px"t type="number" class="form-control m-2" id="name" name="receptionist_id">
+        <label style="margin-top: 30px;" for="score">Age:</label>
+        <inpu style="width: 600px"t type="number" class="form-control m-2" id="name" name="age">
       </div>
       <div style="margin-left: 40px" class="form-group">
-        <label style="margin-top: 30px;" for="name">Doctors ID:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="doctor_id">
+        <label style="margin-top: 30px;" for="name">Gender:</label>
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="gender">
       </div>
       <div style="margin-left: 40px" class="form-group">
-        <label style="margin-top: 30px;" for="name">Date:</label>
-        <input style="width: 600px" type="date" class="form-control m-2" id="name" name="date">
+        <label style="margin-top: 30px;" for="name">Email:</label>
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="email">
       </div>
       <div style="margin-left: 40px" class="form-group">
-        <label style="margin-top: 30px;" for="name">Room:</label>
-        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
+        <label style="margin-top: 30px;" for="name">Password:</label>
+        <input style="width: 600px" type="password" class="form-control m-2" id="name" name="password">
+      </div>
+      <div style="margin-left: 40px" class="form-group">
+        <label style="margin-top: 30px;" for="name">Phone Number:</label>
+        <input style="width: 600px" type="number" class="form-control m-2" id="name" name="phone_number">
+      </div>
+      <div style="margin-left: 40px" class="form-group">
+        <label style="margin-top: 30px;" for="name">Rank:</label>
+        <input style="width: 600px" type="text" class="form-control m-2" id="name" name="rank">
       </div>
 
-      <!-- Image -->
+<!-- Image -->
 
       <label for="image">Upload Image</label><br>
       <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""><br><br>

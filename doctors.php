@@ -1,3 +1,61 @@
+<!-- uploading images -->
+
+<?php
+// error_reporting(0)
+
+    require 'db.php';
+    if (isset($_POST["submit"])){
+      $id = $_POST["id"];
+      $name_surname = $_POST["name_surname"];
+      $age = $_POST["age"];
+      $gender = $_POST["gender"];
+      $email = $_POST["email"];
+      $password = $_POST["password"];
+      $phone_number = $_POST["phone_number"];
+      $rank = $_POST["rank"];
+      $profile_img = $_POST["profile_img"];
+
+        if ($_FILES["image"]["error"] === 4) {
+            echo "<script> alert('Image Does Not Exist'); </script>";
+        } 
+        
+        else{
+            $fileName = $_FILES["image"]["name"];
+            $fileSize = $_FILES["image"]["size"];
+            $tmpName = $_FILES["image"]["tmp_name"];
+
+            $validImageExtension = ['jpg', 'jpeg', 'png'];
+            $imageExtension = explode('.', $fileName);
+            $imageExtension = strtolower(end($imageExtension));
+            if ( !in_array($imageExtension, $validImageExtension) ){
+                echo
+                "
+                <script>
+                  alert('Invalid Image Extension');
+                </script>
+                ";
+              }
+              else  if($fileSize > 1000000){
+                echo "<script> alert('Image Size To Large'); </script>";
+            }
+            else {
+                $newImageName = uniqid();
+                $newImageName .= '.' . $imageExtension;
+
+                move_uploaded_file($tmpName, 'Images/'. $newImageName);
+                $sql = "INSERT INTO doctors (name_surname, age, gender, email, password, phone_number, specialisation, room_id, profile_img) VALUES ('$name_surname', '$age', '$gender', '$email', '$password', '$phone_number', '$specialisation', '$room_id', '$profile_img')";
+                mysqli_query($conn, $sql);
+                echo "<script> alert('Successfully Added'); </script>";
+            }
+        }
+        // $conn->query($sql);
+        // $conn->close();
+
+        // header("location: patients.php");
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +77,8 @@
 </head>
 <body style="background-color: #F7FBFE; background-image: url('Images\Ellipse.png');">
 
+<!-- Nav bar -->
+
 <nav class="navbar">
 <div class="navbar-logo">
       <img src="Images\Logo.png" alt="Logo">
@@ -31,7 +91,7 @@
         <li class="dropdown">
           <a style="color: #126197" href="#">Profile</a>
           <div class="dropdown-content">
-            <a href="#">Lock</a>
+          <a href="receprofile.php">Profile</a>
             <a href="receptionistlogin.php">Logout</a>
           </div>
         </li>
@@ -40,10 +100,12 @@
   
 
 
-  <div class="container" style="background-image: url('Images/Cyrcledecor.png'); background-repeat: no-repeat;">
-  <h1 class="title_home">Upcoming Appointments</h1>
+  <div class="container" style="background-image: url('Images/Background1.png'); background-repeat: no-repeat;">
+  <h1 class="title_home">Doctors Information</h1>
 
-  <div id="appointments" style="width: 650px; margin-left: auto; margin-right: auto; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); border-radius: 10px; padding-left: 80px; padding-top: 50px; margin-top: 50px">
+<!-- Database Information -->
+
+  <div id="appointments" style="width: 750px; margin-left: auto; margin-right: auto; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); border-radius: 10px; padding-left: 80px; padding-top: 50px; margin-top: 50px">
   <table class="table">
     <tbody>
       <?php include 'readdoctors.php'; ?>
@@ -51,8 +113,8 @@
   </table>
   
   
-  <div id="table">
-    <form class="form-inline m-2" action="createpatient.php" method="POST">
+  <div id="table" style="margin-left: 40px">
+    <form class="form-inline m-2" action="createdoctor.php" method="POST">
       <div style="margin-left: 40px" class="form-group">
         <label for="name">Name & Surname:</label>
         <input style="width: 600px" type="text" class="form-control m-2" id="name" name="patient_id">
@@ -85,6 +147,12 @@
         <label style="margin-top: 30px;" for="name">Room ID:</label>
         <input style="width: 600px" type="number" class="form-control m-2" id="name" name="room_id">
       </div>
+
+      <!-- Image -->
+
+      <label for="image">Upload Image</label><br>
+      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""><br><br>
+
       <button type="submit" style="margin-top: 50px; margin-left: 40px; width: 300px; background-color: #09456B; padding-top: 10px; padding-bottom: 10px" class="btn btn-primary">Add</button>
     </form>
   </div>

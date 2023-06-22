@@ -41,15 +41,16 @@ while ($row = $result->fetch_assoc()) {
         echo '</div>';
         echo '</div>';
     } else {
-        echo '<div class="card" style="margin: 30px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); padding: 20px">';
+        echo '<div class="card" style="margin-top: 50px; margin-left: 40px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); padding: 20px">';
         echo '<div class="card-body">';
-        echo '<p class="card-text">Name & Surname: ' . $row['name_surname'] . '</p>';
+        echo '<img src="Images/' .$row["profile_img"]. '" style="width:100px;  height: 100px; border-radius: 50%; margin-left: 150px">';
+        echo '<p class="card-text" style="border-top: 1px solid #09456B; padding-top: 30px; margin-top: 30px">Name & Surname: ' . $row['name_surname'] . '</p>';
         echo '<p class="card-text">Age: ' . $row['age'] . '</p>';
         echo '<p class="card-text">Gender: ' . $row['gender'] . '</p>';
         echo '<p class="card-text">Email: ' . $row['email'] . '</p>';
         echo '<p class="card-text">Phone Number: ' . $row['phone_number'] . '</p>';
         echo '<p class="card-text">Medical Aid Number: ' . $row['medical_aid_number'] . '</p>';
-        echo '<a class="btn btn-primary" style="background-color: #0B466C; margin-top: 30px; margin-right:20px; width: 300px; padding-top: 10px; padding-bottom: 10px;" href="updatepatient.php?id=' . $row['id'] . '">Update</a>';
+        echo '<a class="btn btn-primary" style="background-color: #0B466C; margin-top: 30px; margin-right:20px; width: 300px; padding-top: 10px; padding-bottom: 10px;" href="patients.php?id=' . $row['id'] . '">Update</a>';
         echo '<a class="btn btn-danger" style="width: 90px; margin-top: 30px; background-color: rgb(97, 0, 0);" href="deletepatient.php?id=' . $row['id'] . '"><img style="width: 25px" src="Images\recycle-bin (1).png" alt=""></a>';
         echo '</div>';
         echo '</div>';

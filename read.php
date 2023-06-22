@@ -37,9 +37,10 @@ while ($row = $result->fetch_assoc()) {
         echo '</div>';
         echo '</div>';
     } else {
-        echo '<div class="card" style="margin-bottom: 30px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); padding: 20px">';
+        echo '<div class="card" style="margin-top: 50px; margin-left: 40px; margin-bottom: 40px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); padding: 20px">';
         echo '<div class="card-body">';
-        echo '<p class="card-text">Patient ID: ' . $row['patient_id'] . '</p>';
+        echo '<img src="Images/' .$row["image"]. '" style="width:100px;  height: 100px; border-radius: 50%; margin-left: 150px">';
+        echo '<p class="card-text" style="border-top: 1px solid #09456B; padding-top: 30px; margin-top: 30px">Patient ID: ' . $row['patient_id'] . '</p>';
         echo '<p class="card-text">Doctor ID: ' . $row['doctor_id'] . '</p>';
         echo '<p class="card-text">Receptionist ID: ' . $row['receptionist_id'] . '</p>';
         echo '<p class="card-text">Room ID: ' . $row['room_id'] . '</p>';

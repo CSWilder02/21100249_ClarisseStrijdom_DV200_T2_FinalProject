@@ -10,9 +10,9 @@
     <script src="index.js"></script>
     
 </head>
-<body style="background-image: url('Images/Error.png'); background-size: 1200px 680px; background-position: 50% 2%;">
+<body style="background-image: url('Images/Error.png'); background-size: 1300px 740px; background-position: 50% 2%;">
     <div>
-        <a href="receptionistlogin.php"><button style="text-decoration: none; margin-top: 470px; margin-left: 520px" class="btn-grad">Return To Login</button></a>
+        <a href="receptionistlogin.php"><button style="text-decoration: none; margin-top: 500px; margin-left: 590px" class="btn-grad">Return To Login</button></a>
     </div>
 </body>
 </html>
