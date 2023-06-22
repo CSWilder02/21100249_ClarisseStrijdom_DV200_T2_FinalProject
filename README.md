@@ -29,16 +29,6 @@
 
 A website that allows access to multiple receptionists from a doctors room to login. Our website was build to authenticate, validate and secure receptionist profiles. Add and stor patient and doctor information. Update, delete patient and doctor information. Update current logged in receptionist profile. Setup and delete appointments between doctors, patients and doctor rooms. Our website should also showcase "todays"or "this weeks"appointments. 
  
-   <br>
-    <i>more about website</i> 
-    
-   <br />
-   <br />
-    ·
-    <a href="https://github.com/YourName/Pokemon/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/YourName/Pokemon/issues">Request Feature</a>
-</p>
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -70,7 +60,7 @@ A website that allows access to multiple receptionists from a doctors room to lo
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](Images/Medical%20mockup3.png)
+![image1](MockUps/MedicalMocup.png)
 
 ### Project Description
 
@@ -118,25 +108,27 @@ Run the following in the command-line to clone the project:
 ## Features and Functionality
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2](images/mEDICAL%20MOCKUP.png)
+![image2](MockUps/MedicalMockUp.png)
 
 
-### Name Feature 
-About Feature
+### Create
+This feature allows all receptionists to create new doctor's accounts as well as patient and patient/doctor's appointments.
 
 
-### Name Feature 
-About Feature
+### Delete
+This feature allows all receptionists to delete doctor's accounts as well as patient and patient/doctor's appointments.
 
 
-### Name Feature 
-About Feature
+### Update
+This feature allows all receptionists to update all information in doctor's accounts as well as patient and patient/doctor's appointments.
+Only the Head receptionist can however update, create or delete receptionist accounts.
 
 
-### Name Feature 
-About Feature
+### Upload 
+This feature allow new data to be uploaded from the website into our database. Such as information, appointments or images.
 
-
+### Login 
+Using localStorage we setup a login page that stores all receptionist information so that if the wrong informatuion is used for login it will take the user to the error page.
 
 
 
@@ -145,62 +137,44 @@ About Feature
 <!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
 ## Concept Process
 
-The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
+The `Conceptual Process` is the set of actions, activities and research that was done when starting this project. Starting this project we had a set brief that we had to stick with creating our project. With this we had activities and self study homework to do in order to understand PHP and MySQL. We studied on what it means and how to use these funstionalities of PHP. 
 
 ### Ideation
-speak about planning.
+On my planning I did research on some medical websites to create a new and unique style to my webiste and make it easy to use and accessible for all users. 
 
 
-![image5](pokemonproject/src/Images/Ideation/concept.png)
+![image5](MockUps/MedicalMockUp.png)
 <br>
-<!-- ![image6][image6] -->
 
-### Wireframes
-explain process
-
-![image7](pokemonproject/src/Images/Ideation/wireframes.png)
+![image7](MockUps/MedicalMocup.png)
 
 ### Custom UI
-explain process
+Using the color blue is a symbol of the medical industry. I used medical staff illustration to create a more friendly visual design for my application.
 
 
-![image8](pokemonproject/src/Images/Ideation/process.png)
-
-<!-- DEVELOPMENT PROCESS -->
-## Development Process
-
-The `Development Process` is ....
-
-Explain process
+![image8](MockUps/MedicalMockUp.png)
 
 
-### Implementation Process
-<!-- stipulate all of the functionality you included in the project -->
-<!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
-
-* Utilized React `Charts.JS` dependency for Data visualization
-* Implemented Routing with `React-Router v6`.
-* API End Point: https://pokeapi.co/ 
 
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* List
-* Highlights
-* Here
+* Some highlights from my project:
+1. I learned how toupload information from a website onto a database
+2. Learning how an ER diagram setup and how to link it
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* List
-* Challenges
-* Here
+* Challenges faced:
+1. Image implementation, onhow to upload images and store them into your files aswell as the database.
+
 
 
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* In future I would like to....
+* In future I would like to focus  on doiing more self study work to be able to implement more features and UI designs to my webistes and application. I want to focus on creating more visually plesant design and more interactivity when it comes to my websites.
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -224,7 +198,7 @@ See the [open issues](https://github.com/YourName/Pokemon/issues) for a list of 
 <!-- AUTHORS -->
 ## Authors
 
-* **YourName** - [YourName](https://github.com/YourName)
+* **CS Strijdom** - [CS Strijdom](https://github.com/CSWilder02)
 
 <!-- LICENSE -->
 ## License
@@ -234,8 +208,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **YourName** - [YourNum@virtualwindow.co.za](mailto:YourNum@virtualwindow.co.za) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
-* **Project Link** - https://github.com/YourName/Pokemon
+* **CS Strijdom** - [21100249@virtualwindow.co.za](mailto:21100249@virtualwindow.co.za) 
+* **Project Link** - https://github.com/CSWilder02/21100249_ClarisseStrijdom_DV200_T2_FinalProject
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
